@@ -9,9 +9,17 @@
 
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
-                {{-- タスク作成ページへのリンク --}}
-                <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクを作成する', [], ['class' => 'nav-link']) !!}</li>
+
+            {{-- <ul class="navbar-nav"> --}}
+            {{--     {{-- タスク作成ページへのリンク --}}
+            {{-- <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクを作成する', [], ['class' => 'nav-link']) !!}</li> --}}
+            {{-- </ul> --}}
+
+            <ul class="navbqar-nav">
+                {{-- ユーザ登録ページへのリンク --}}
+                <li class="nav-item"><a href="#" class="nav-link">ユーザ登録</a></li>
+                {{-- ログインページへのリンク --}}
+                <li class="nav-item"><a href="#" class="nav-link">ログイン</a></li>
             </ul>
         </div>
     </nav>
