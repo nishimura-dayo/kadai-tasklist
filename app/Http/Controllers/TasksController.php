@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Task;
 
+use App;
+
 class TasksController extends Controller
 {
     /**
@@ -16,16 +18,26 @@ class TasksController extends Controller
     // getでtasks/にアクセスされた場合の「一覧表示処理」
     public function index()
     {
-        // タスク一覧を取得
-        // $tasks = Task::paginate(25);
-        
-        // メッセージ一覧をidの降順で取得
-        $tasks = Task::orderBy('id', 'desc')->paginate(25);
-    
-        // タスク一覧ビューでそれを表示
-        return view('tasks.index', [
-            'tasks' =>$tasks,
-        ]);
+        $data = [];
+        if (\Auth::check()) { // 認証済みの場合
+            // 認証済みユーザを取得
+            $user = \Auth::user();
+            // ユーザの投稿の一覧を作成日時の降順で取得
+            $tasks = $user->tasks()->orderBy('created_at', 'desc')->paginate(25);
+
+            $data = [
+            'user' => $user,
+            'tasks' => $tasks,
+            ];
+
+            return view('tasks.index', [
+                'tasks' =>$tasks,
+            ]);
+
+        } else {
+            // Welcomeビューでそれらを表示
+            return view('welcome', $data);
+        }
     }
 
     /**
@@ -59,11 +71,11 @@ class TasksController extends Controller
             'status' => 'required|max:10',
         ]);
 
-        // タスクを作成
-        $task = new Task;
-        $task->content = $request->content;
-        $task->status = $request->status;
-        $task->save();
+        // 認証済みユーザ(閲覧者)の投稿として作成(リクエストされた値をもとに作成)
+        $request->user()->tasks()->create([
+            'content' => $request->content,
+            'status'  => $request->status,
+        ]);
         
         // トップページへリダイレクトさせる
         return redirect('/');
@@ -81,10 +93,15 @@ class TasksController extends Controller
         // idの値でタスクを検索して取得
         $task = Task::findOrFail($id);
         
-        //タスク詳細ビューでそれを表示
-        return view('tasks.show', [
-            'task' => $task,
-        ]);
+        // 認証済みユーザ（閲覧者）がその投稿の所有者である場合
+        if (\Auth::id() === $task->user_id) {
+            //タスク詳細ビューでそれを表示
+            return view('tasks.show', [
+                'task' => $task,
+            ]);
+        }
+         // トップページへリダイレクトさせる
+        return redirect('/');
     }
 
     /**

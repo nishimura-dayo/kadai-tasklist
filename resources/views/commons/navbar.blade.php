@@ -12,10 +12,13 @@
             <ul class="navbar-nav">
                 @if (Auth::check())
                     {{-- タスク作成ページへのリンク --}}
-                    {{-- <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクを作成', [], ['class' => 'nav-link']) !!}</li>--}}
-                    <li class="nav-item">{!! link_to_route('logout.get', '新規タスクを作成', [], ['class' => 'nav-link']) !!}</li>
-                    {{-- ログアウトへのリンク --}}
-                    <li class="nav-item">{!! link_to_route('logout.get', 'ログアウト', [], ['class' => 'nav-link']) !!}</li>
+                    <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクを作成', [], ['class' => 'nav-link']) !!}</li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="small">さん</span></a>                        <ul class="dropdown-menu dropdown-menu-right">
+                            {{-- ログアウトへのリンク --}}
+                            <li class="dropdown-item">{!! link_to_route('logout.get', 'ログアウト') !!}</li>
+                        </ul>
+                    </li>
                 @else
                     {{-- ユーザ登録ページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('signup.get', 'ユーザ登録', [], ['class' => 'nav-link']) !!}</li>

@@ -1,0 +1,89 @@
+[33mcommit cafdf4692c5e7270a5b7403a337c02f68a012ac6[m[33m ([m[1;36mHEAD -> [m[1;32missue2[m[33m)[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Fri Nov 5 04:54:04 2021 +0000
+
+    navbar add user_name
+
+[33mcommit 986525c5142eb7795d743c53d588e64251c32e54[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Thu Nov 4 16:03:34 2021 +0000
+
+    user login
+
+[33mcommit 4c2e6847b61b8ae3ad68127b0e3530ddff59da25[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Thu Nov 4 15:02:27 2021 +0000
+
+    user registration
+
+[33mcommit da4e2a779bf9df9725827db6605696d30c376a9f[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Thu Nov 4 13:25:57 2021 +0000
+
+    change top page
+
+[33mcommit 9e4dab8110859a1e7badd82c22698ae2d3b8c8bb[m[33m ([m[1;31morigin/main[m[33m, [m[1;31mheroku/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Wed Oct 27 15:05:31 2021 +0000
+
+    Procfile
+
+[33mcommit 5308a50862ee92a051b8df83d71e9a200e58c39b[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Wed Oct 27 14:35:12 2021 +0000
+
+    add paginate
+
+[33mcommit ea216d5afe8187bd4c253831b73b37853af88d16[m
+Author: nabecchi <92443197+nishimura-dayo@users.noreply.github.com>
+Date:   Wed Oct 27 14:13:34 2021 +0000
+
+    add seeder
+
+[33mcommit a2997327d1325cbb83bcf836af6d10c07264c48b[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Sat Oct 23 07:58:15 2021 +0000
+
+    add VARCHAR(10)
+
+[33mcommit 7cfffd0d15bcc2f2b0d9fde4538d425244f29cae[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Sat Oct 23 07:27:09 2021 +0000
+
+    navbar name change
+
+[33mcommit 97aaf6faa887b84c0b84425474b85df373de141f[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Sat Oct 23 07:22:12 2021 +0000
+
+    validation
+
+[33mcommit 68da26434f135b90b9494c636aa2d29d3bcc15a2[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Sat Oct 23 04:33:49 2021 +0000
+
+    add column
+
+[33mcommit f0dcd5c0181de1f4ba15f21850d7f8e53b82c980[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Fri Oct 22 18:31:16 2021 +0000
+
+    CRUD tasks
+
+[33mcommit da83871bc6010119e33d6c9f85f53ee7e5d767e2[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Fri Oct 22 15:16:27 2021 +0000
+
+    task model
+
+[33mcommit 1b78a7e8833ba58f44abfd11b5030779d0047379[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Fri Oct 22 14:34:46 2021 +0000
+
+    set timezone
+
+[33mcommit beb569bc6e451672b6b4b3b3063f72479072c741[m
+Author: nabecchi <1919kimonolove@gmail.com>
+Date:   Fri Oct 22 14:06:36 2021 +0000
+
+    init Laravel Project
